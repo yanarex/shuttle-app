@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.protoshuttleapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.example.protoshuttleapp.MapsFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/navigation_maps" /> <!-- Or @layout/navigation_maps if that's correct -->
+
+    <fragment
+        android:id="@+id/navigation_schedule"
+        android:name="com.example.protoshuttleapp.ScheduleFragment"
+        android:label="@string/title_schedule"
+        tools:layout="@layout/fragment_schedule" />
+
+    <fragment
+        android:id="@+id/navigation_notify"
+        android:name="com.example.protoshuttleapp.NotifyFragment"
+        android:label="@string/title_notify"
+        tools:layout="@layout/fragment_notify" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.protoshuttleapp.ui.dashboard.DashboardFragment"
+        tools:layout="@layout/fragment_dashboard" /> <!-- Consider renaming class to SettingsFragment if SettingsFragment3 is a typo -->
+    android:label="@string/title_settings"
+    tools:layout="@layout/fragment_settings" />
+
+</navigation>
