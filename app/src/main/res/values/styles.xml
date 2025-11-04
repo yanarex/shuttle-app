@@ -1,0 +1,8 @@
+<resources>
+    <!-- pill background behind the selected bottom tab -->
+    <style name="Nav.ActiveIndicator">
+        <item name="android:color">@color/fit_crimson</item>
+        <item name="android:alpha">0.10</item>
+        <item name="shapeAppearance">@style/Shape.Rounded.Medium</item>
+    </style>
+</resources>

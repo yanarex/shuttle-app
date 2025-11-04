@@ -1,39 +1,25 @@
-package com.example.protoshuttleapp
+package com.example.protoshuttleapp   // <-- must match your package
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.example.protoshuttleapp.databinding.ActivityMainBinding
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.protoshuttleapp.R   // <-- add this import
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        findViewById<MaterialToolbar>(R.id.toolbar)?.let { setSupportActionBar(it) }
 
-        val navView: BottomNavigationView = binding.navView
+        val navHost = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHost.navController
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, // Keep Home
-                R.id.navigation_map,    // <<< ADD THIS
-                R.id.navigation_schedule, // <<< ADD THIS
-                R.id.navigation_notify,   // <<< ADD THIS (or update if you reused navigation_notifications)
-                R.id.navigation_settings  // <<< ADD THIS
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        findViewById<BottomNavigationView>(R.id.bottomNav)
+            .setupWithNavController(navController)
     }
 }
