@@ -1,12 +1,10 @@
 <resources>
-    <!-- Florida Tech palette -->
     <color name="fit_crimson">#7A0C10</color>
     <color name="fit_crimson_dark">#5C0A0D</color>
     <color name="fit_black">#000000</color>
     <color name="fit_white">#FFFFFF</color>
     <color name="fit_sand">#E9DFD6</color>
 
-    <!-- Material mapping -->
     <color name="md_theme_primary">@color/fit_crimson</color>
     <color name="md_theme_onPrimary">@color/fit_white</color>
     <color name="md_theme_secondary">@color/fit_black</color>
