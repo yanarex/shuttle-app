@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScheduleFragment">
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
-    <ImageView
-        android:id="@+id/schedule_image_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="150dp"
-        android:contentDescription="@string/description_of_your_image"
-        android:src="@drawable/schedule_1" />
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
 
-    <ImageView
-        android:id="@+id/schedule_image_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="175dp"
-        android:contentDescription="@string/description_of_your_image"
-        android:src="@drawable/schedule_2" />
 </FrameLayout>
